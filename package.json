@@ -1,0 +1,61 @@
+{
+  "name": "links-tam-portfolio",
+  "version": "2.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1 --port 3006",
+    "build": "next build",
+    "start": "next start --hostname 127.0.0.1 --port 3006",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "node scripts/craft-qa.mjs",
+    "test:content": "node scripts/craft-qa.mjs",
+    "pdf:export": "node scripts/verify-official-resume.mjs",
+    "test:memory": "node scripts/craft-key-performance.mjs",
+    "test:memory:performance": "node scripts/craft-key-performance.mjs",
+    "test:rebuild:status": "node scripts/craft-status-test.mjs",
+    "test:resume-access": "node scripts/resume-access-qa.mjs",
+    "format": "prettier --write src docs README.md",
+    "format:check": "prettier --check src",
+    "test:craft": "node scripts/craft-qa.mjs",
+    "build:pages": "node scripts/build-pages.mjs"
+  },
+  "dependencies": {
+    "@gsap/react": "^2.1.2",
+    "@react-three/fiber": "9.8.1",
+    "clsx": "^2.1.1",
+    "gsap": "^3.15.0",
+    "lucide-react": "^0.525.0",
+    "next": "15.5.28",
+    "pdfjs-dist": "6.4.299",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "sharp": "0.35.5",
+    "tailwind-merge": "^3.3.1",
+    "three": "0.185.1"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@playwright/test": "1.64.1",
+    "@tailwindcss/postcss": "^4.1.11",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/three": "0.185.0",
+    "autoprefixer": "^10.4.21",
+    "cross-env": "^10.1.0",
+    "eslint": "^9",
+    "eslint-config-next": "15.5.28",
+    "postcss": "8.5.32",
+    "prettier": "3.6.2",
+    "tailwindcss": "^4.1.11",
+    "tw-animate-css": "^1.3.6",
+    "typescript": "^5"
+  },
+  "overrides": {
+    "postcss": "$postcss",
+    "@typescript-eslint/typescript-estree": {
+      "minimatch": "11.0.1"
+    }
+  }
+}

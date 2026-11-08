@@ -1,0 +1,68 @@
+[
+  {
+    "src": "/assets/manga-cover.webp",
+    "width": 1600,
+    "height": 900,
+    "purpose": "Concept Artwork",
+    "source": "AI generated; docs/ART_PROMPTS.json",
+    "sourceId": "manga-cover.webp",
+    "license": "Portfolio original visual proposal; no product or employment evidence",
+    "approval": "Existing portfolio artwork retained",
+    "sha256": "600cf0b3310525a30d96ea5fb23276ad2887ab702ef0a8999cb2738bca636911"
+  },
+  {
+    "src": "/assets/agent-cover.webp",
+    "width": 1600,
+    "height": 900,
+    "purpose": "Concept Artwork",
+    "source": "AI generated; docs/ART_PROMPTS.json",
+    "sourceId": "agent-cover.webp",
+    "license": "Portfolio original visual proposal; no product or employment evidence",
+    "approval": "Existing portfolio artwork retained",
+    "sha256": "77b825902fb9f6c1632c9bf6b63104c6ae4f3f9b7a310fff5f47062367c9b775"
+  },
+  {
+    "src": "/assets/toolbox-cover.webp",
+    "width": 1600,
+    "height": 900,
+    "purpose": "Concept Artwork",
+    "source": "AI generated; docs/ART_PROMPTS.json",
+    "sourceId": "toolbox-cover.webp",
+    "license": "Portfolio original visual proposal; no product or employment evidence",
+    "approval": "Existing portfolio artwork retained",
+    "sha256": "c95885ffc63decac2ed88a6e9a358546f53275206e161c21bab41638d79050d9"
+  },
+  {
+    "src": "/assets/ledger-cover.svg",
+    "width": 1600,
+    "height": 900,
+    "purpose": "Concept Artwork",
+    "source": "Project-authored SVG",
+    "sourceId": "ledger-cover.svg",
+    "license": "Portfolio original visual proposal; no product or employment evidence",
+    "approval": "Existing portfolio artwork retained",
+    "sha256": "e9ff7ce14a4f10539b26a97f1f14053067dabd5a9934ae241885f93aca28cf88"
+  },
+  {
+    "src": "/assets/gateway-cover.svg",
+    "width": 1600,
+    "height": 900,
+    "purpose": "Concept Artwork",
+    "source": "Project-authored SVG",
+    "sourceId": "gateway-cover.svg",
+    "license": "Portfolio original visual proposal; no product or employment evidence",
+    "approval": "Existing portfolio artwork retained",
+    "sha256": "4e760f784ec541a38d926b3b316a42e1407f9cc010b18e715714c43d215c1142"
+  },
+  {
+    "src": "/assets/links-character.webp",
+    "width": 1000,
+    "height": 1500,
+    "purpose": "Original IP Concept",
+    "source": "AI generated fictional creator; not a real portrait; docs/ART_PROMPTS.json",
+    "sourceId": "links-character.webp",
+    "license": "Portfolio original visual proposal; no product or employment evidence",
+    "approval": "Existing portfolio artwork retained",
+    "sha256": "f45eb9bbe04a465f1b6bec21c1b25158f4149b3beb80eba7d994f2239a39b15f"
+  }
+]
