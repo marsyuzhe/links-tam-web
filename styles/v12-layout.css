@@ -1,0 +1,121 @@
+/* The visual stage follows the viewport. Reading copy retains rem-based limits. */
+@media (min-width: 2100px) {
+  .craft-site .reading-main {
+    width: min(92vw, 180svh);
+    max-width: none;
+    margin-inline: auto;
+  }
+  .craft-site .craft-page {
+    width: 100%;
+    max-width: none;
+    margin-inline: auto;
+  }
+  .craft-site .craft-opening h1 {
+    font-size: 9vw;
+  }
+  .craft-site .craft-type-phrase {
+    font-size: 10vw;
+  }
+  .craft-site .craft-media-preview {
+    width: 85%;
+  }
+  .craft-relations,
+  .craft-relation-column {
+    min-width: 0;
+  }
+}
+@media (max-width: 600px), (max-height: 400px) {
+  #top {
+    min-height: 100svh;
+    height: auto;
+    padding-bottom: 36px;
+  }
+  #top .hero-role {
+    height: auto;
+    min-height: 2.4em;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+  }
+  #top .hero-content {
+    max-width: 100%;
+  }
+  #top .hero-name {
+    font-size: clamp(2rem, 12vw, 3.2rem);
+  }
+  .craft-section-heading,
+  .craft-opening-note {
+    display: block;
+  }
+  .craft-section-heading p {
+    margin-top: 16px;
+  }
+  .reading-title,
+  .world-feature-copy h1,
+  .chapter-title {
+    overflow-wrap: anywhere;
+  }
+  .gallery-dialog {
+    max-height: 96svh;
+    overflow: auto;
+  }
+  .gallery-dialog-header {
+    height: auto;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 360px) {
+  .site-nav > div:first-child {
+    padding: 10px 12px;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .site-nav > div:first-child > div:last-child {
+    gap: 6px;
+  }
+  .site-nav .nav-side {
+    display: none;
+  }
+  .reading-header {
+    padding-inline: 16px;
+    gap: 8px;
+  }
+  .reading-controls {
+    gap: 8px;
+  }
+  .reading-main {
+    width: calc(100% - 32px);
+  }
+  .reading-wordmark {
+    font-size: 20px;
+  }
+  .craft-key-options {
+    padding: 0;
+  }
+  .craft-controls {
+    gap: 6px;
+  }
+  .craft-controls button {
+    padding: 10px 12px;
+  }
+  .world-overview > button {
+    grid-template-columns: 1fr;
+  }
+  .world-facts {
+    grid-template-columns: 1fr;
+  }
+}
+/* At high native zoom the viewport may be only 180 CSS px tall. A persistent
+   masthead would cover the very controls it is meant to help reach. */
+@media (max-height: 400px) {
+  .reading-header {
+    position: relative;
+    top: auto;
+  }
+  .reading-main,
+  .craft-page {
+    padding-top: 24px;
+  }
+  .site-nav {
+    position: absolute;
+  }
+}
