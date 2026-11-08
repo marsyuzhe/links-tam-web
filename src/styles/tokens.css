@@ -1,0 +1,56 @@
+/* Compatibility layer: existing source colors keep their meaning, including light mode. */
+:root {
+  --links-bg: var(--color-black);
+  --links-fg: var(--color-white);
+  --links-muted: var(--color-gray-400);
+  --links-surface: rgb(var(--fg-rgb) / 0.025);
+  --links-line: rgb(var(--fg-rgb) / 0.16);
+  --links-line-strong: rgb(var(--fg-rgb) / 0.28);
+  --links-accent: var(--color-blue-400);
+  --links-copper: #c29a80;
+  --links-ice: #b7d4e4;
+  --links-content: 1440px;
+  --links-reading: 760px;
+  --links-gutter: clamp(24px, 5vw, 80px);
+  --links-section: clamp(90px, 11vw, 170px);
+  --links-font-body: var(--font-geist-sans), 'Microsoft YaHei', 'PingFang SC', sans-serif;
+  --links-font-code: var(--font-geist-mono), monospace;
+  --links-size-body: clamp(15px, 1.15vw, 18px);
+  --links-size-title: clamp(32px, 4.5vw, 64px);
+  --links-leading: 1.85;
+  --links-radius-media: 16px;
+  --links-radius-control: 999px;
+  --links-shadow-media: 0 22px 70px #0003;
+  --links-duration-hover: 180ms;
+  --links-duration-press: 100ms;
+  --links-duration-expand: 550ms;
+  --links-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reading-button {
+  border-color: var(--links-line-strong);
+  border-radius: var(--links-radius-control);
+  transition:
+    border-color var(--links-duration-hover),
+    background-color var(--links-duration-hover);
+}
+.reading-button:hover {
+  border-color: var(--links-accent);
+}
+.resume-rebuilt,
+.community-rebuilt {
+  --rebuild-line: var(--links-line);
+}
+.reading-main {
+  max-width: var(--links-content);
+}
+.media-frame,
+.gallery-dialog {
+  border-radius: var(--links-radius-media);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reading-button {
+    transition: none;
+  }
+}
