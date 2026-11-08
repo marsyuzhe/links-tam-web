@@ -1,0 +1,165 @@
+.project-flight {
+  position: fixed;
+  z-index: 90;
+  object-fit: contain;
+  pointer-events: none;
+  background: var(--links-bg);
+  border-radius: var(--links-radius-media);
+}
+.archive-preview {
+  display: block;
+  width: min(100%, 168px);
+  border: 1px solid var(--links-line);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+.archive-preview:hover,
+.archive-preview:focus-visible {
+  border-color: var(--links-accent);
+}
+.archive-preview img {
+  width: 100%;
+  height: auto;
+}
+/* Fit measures the rendered image. Leave letterboxing to the frame, not the image box. */
+.media-frame > img,
+.gallery-dialog > img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  margin-inline: auto;
+}
+.media-frame > img {
+  max-height: min(62vw, 70vh, 760px);
+}
+.gallery-dialog[open] {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  gap: 12px;
+}
+.gallery-dialog > img {
+  max-height: 100%;
+  min-height: 0;
+  align-self: center;
+  margin-block: 0;
+}
+.gallery-dialog .media-caption {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 14px;
+  margin: 0;
+}
+.gallery-dialog .gallery-controls {
+  margin: 0 0 0 auto;
+}
+.world-overview > button[aria-selected='true'] {
+  border-bottom-color: var(--tab-accent);
+}
+.world-status {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  color: var(--links-muted);
+}
+.world-status::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  flex: none;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+}
+.world-status[data-status='online'] {
+  color: var(--links-accent);
+}
+.world-status[data-status='online']::before {
+  background: currentColor;
+}
+.world-live {
+  margin-block: 20px;
+  padding-block: 12px;
+  border-block: 1px solid var(--links-line);
+}
+.world-feature-copy h1 {
+  font-size: clamp(2.8rem, 6.5vw, 6.8rem);
+  line-height: 1.08;
+  letter-spacing: -0.065em;
+  margin: 12px 0 18px;
+}
+.community-rebuilt[data-detail='true'] .world-feature {
+  margin-top: clamp(28px, 5vw, 76px);
+}
+.world-stage-art {
+  border: 1px solid var(--links-line);
+  border-radius: var(--links-radius-media);
+}
+.world-stage-art[data-world='minecraft'] {
+  background-color: color-mix(in srgb, var(--world-accent) 4%, var(--links-bg));
+}
+.world-stage-art[data-world='terraria'] {
+  background-color: color-mix(in srgb, var(--world-accent) 7%, var(--links-bg));
+}
+.world-stage-art[data-world='project-zomboid'] {
+  background-color: color-mix(in srgb, var(--world-accent) 5%, var(--links-bg));
+}
+.world-lanes summary {
+  line-height: 1.6;
+}
+.experience-evidence .work-evidence img {
+  height: auto;
+  object-fit: contain;
+}
+.experience-evidence .work-evidence {
+  border-color: var(--links-line);
+}
+.chapter-active .chapter-meta {
+  color: var(--links-accent);
+}
+.chapter-title:focus-visible {
+  outline-offset: 5px;
+}
+@media (min-width: 1850px) {
+  #projects .projects-track {
+    perspective: 130vw;
+  }
+  #projects .project-card {
+    width: clamp(440px, 27vw, 47svh);
+  }
+  #projects .project-card-media {
+    height: auto;
+    aspect-ratio: 2.12;
+  }
+  #projects .project-card h3 {
+    font-size: clamp(20px, 1.35vw, 3.1svh);
+  }
+  #projects .project-card h3 + p {
+    font-size: clamp(16px, 0.95vw, 2.2svh);
+  }
+}
+@media (max-width: 760px) {
+  .community-rebuilt[data-detail='true'] .world-feature-copy {
+    grid-row: 1;
+    margin-top: 0;
+  }
+  .world-overview {
+    margin-bottom: 30px;
+  }
+  .world-overview > button {
+    padding: 14px 12px;
+  }
+  .world-overview strong {
+    font-size: 17px;
+  }
+  .world-stage-art {
+    min-height: 210px;
+  }
+  .world-lanes article {
+    min-height: 0;
+  }
+  .resume-screen .resume-chapter:not(.chapter-active) :is(ul, .chapter-links) {
+    display: none;
+  }
+}
