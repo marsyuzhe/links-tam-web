@@ -1,0 +1,169 @@
+/* Monochrome motion stays behind the site; chromatic light belongs to Skills. */
+.ambient-field {
+  color: var(--color-white);
+  contain: strict;
+}
+.ambient-orb-silver {
+  background: radial-gradient(
+    ellipse at 45% 50%,
+    rgb(var(--fg-rgb) / 0.095),
+    rgb(var(--fg-rgb) / 0.025) 38%,
+    transparent 67%
+  );
+}
+.ambient-orb-pearl {
+  background: radial-gradient(ellipse at 50% 45%, rgb(var(--fg-rgb) / 0.07), transparent 64%);
+}
+.ambient-orb-smoke {
+  background: radial-gradient(ellipse at 45% 55%, rgb(var(--fg-rgb) / 0.055), transparent 66%);
+}
+.ambient-grid {
+  opacity: 0.045;
+  animation: links-grid-drift 32s ease-in-out infinite alternate;
+}
+.ambient-fragment {
+  opacity: 0.18;
+  filter: drop-shadow(0 0 7px rgb(var(--fg-rgb) / 0.08));
+  will-change: transform;
+}
+.ambient-fragment:nth-of-type(3n) {
+  opacity: 0.11;
+}
+.ambient-suspended .ambient-grid {
+  animation-play-state: paused;
+}
+@keyframes links-grid-drift {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(18px, 36px, 0);
+  }
+}
+
+.skills-spectrum {
+  isolation: isolate;
+  --skill-accent-ink: var(--skill-accent);
+}
+.skills-spectrum::before {
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  inset: 12% -12% 0;
+  background:
+    radial-gradient(ellipse at 24% 48%, #5eead40b, transparent 37%),
+    radial-gradient(ellipse at 65% 40%, #a78bfa09, transparent 40%);
+  z-index: 0;
+}
+.skills-spectrum > div {
+  position: relative;
+  z-index: 1;
+}
+.skills-spectrum .heading-accent {
+  background-image: linear-gradient(100deg, #5eead4, #60a5fa 32%, #b39afb 65%, #fb8baa);
+}
+.galaxy-aura {
+  background:
+    radial-gradient(ellipse at 35% 38%, #5eead433, transparent 57%),
+    radial-gradient(ellipse at 70% 48%, #818cf833, transparent 57%),
+    radial-gradient(ellipse at 55% 78%, #fb71851a, transparent 57%);
+  animation: links-spectrum-breathe 12s ease-in-out infinite alternate;
+}
+.skills-spectrum .core {
+  background: radial-gradient(circle at 28% 24%, #398c95, #3d52a4 55%, #865793);
+  box-shadow:
+    0 0 32px #5eead42b,
+    0 0 70px #a78bfa33,
+    inset 0 1px 1px #ffffff66;
+  color: #fff;
+}
+.skills-spectrum .core > span {
+  background: #a78bfa24;
+}
+.skill-tab {
+  --skill-accent-ink: var(--skill-accent);
+  border-color: rgb(var(--fg-rgb) / 0.15);
+  color: var(--color-gray-300);
+  background: rgb(var(--fg-rgb) / 0.015);
+}
+.skill-tab:hover {
+  border-color: var(--skill-accent);
+  color: var(--skill-accent-ink);
+}
+.skill-tab[aria-selected='true'] {
+  border-color: color-mix(in srgb, var(--skill-accent) 60%, transparent);
+  background: color-mix(in srgb, var(--skill-accent) 13%, transparent);
+  color: var(--skill-accent-ink);
+  box-shadow: 0 0 20px color-mix(in srgb, var(--skill-accent) 9%, transparent);
+}
+.skills-spectrum .panel-item {
+  border-color: color-mix(in srgb, var(--skill-accent) 20%, transparent);
+  background: linear-gradient(
+    115deg,
+    color-mix(in srgb, var(--skill-accent) 6%, transparent),
+    rgb(var(--fg-rgb) / 0.025)
+  );
+  transition:
+    border-color 0.3s,
+    background 0.3s;
+}
+.skills-spectrum .panel-item:hover {
+  border-color: color-mix(in srgb, var(--skill-accent) 60%, transparent);
+}
+@keyframes links-spectrum-breathe {
+  from {
+    transform: scale(0.94);
+    opacity: 0.65;
+  }
+  to {
+    transform: scale(1.07);
+    opacity: 1;
+  }
+}
+:root[data-theme='light'] .ambient-grid {
+  opacity: 0.035;
+}
+:root[data-theme='light'] .ambient-fragment {
+  opacity: 0.12;
+}
+:root[data-theme='light'] .skills-spectrum,
+:root[data-theme='light'] .skill-tab {
+  --skill-accent-ink: color-mix(in srgb, var(--skill-accent) 38%, #13202e);
+}
+:root[data-theme='light'] .skills-spectrum .heading-accent {
+  background-image: linear-gradient(100deg, #157e78, #315fa3 32%, #7656b6 65%, #a3416e);
+}
+@media (max-width: 600px) {
+  .ambient-fragment:nth-of-type(n + 5) {
+    display: none;
+  }
+  .ambient-fragment {
+    opacity: 0.12;
+  }
+  .ambient-grid {
+    opacity: 0.03;
+  }
+  .ambient-orb-silver {
+    opacity: 0.8;
+  }
+  .galaxy-aura {
+    inset: 8%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ambient-grid,
+  .galaxy-aura {
+    animation: none;
+  }
+  .ambient-fragment {
+    display: none;
+  }
+  .skills-spectrum .core > span {
+    animation: none;
+  }
+}
+@media print {
+  .ambient-field {
+    display: none;
+  }
+}

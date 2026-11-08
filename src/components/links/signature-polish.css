@@ -1,0 +1,175 @@
+.signature-intro .preloader-panel {
+  background: #090909;
+  color: #f4f4f4;
+}
+.signature-intro .preloader-panel:first-of-type {
+  background: #242424;
+}
+.signature-intro .preloader-name {
+  color: #f4f4f4;
+  font-size: clamp(42px, 5.4vw, 76px);
+  line-height: 1.15;
+  letter-spacing: -0.045em;
+}
+.preloader-signature {
+  width: clamp(175px, 21vw, 280px);
+  aspect-ratio: 500/235;
+  margin: 12px auto 0;
+  overflow: hidden;
+}
+.preloader-signature img {
+  position: relative;
+  top: -15%;
+  width: 100%;
+  height: auto;
+}
+.signature-intro .preloader-bar-wrap {
+  margin-top: 25px;
+  width: clamp(120px, 15vw, 210px);
+}
+.signature-intro .preloader-bar {
+  background: linear-gradient(90deg, #b9bec5, #d6e1e8);
+}
+.signature-intro .preloader-count {
+  display: block;
+  bottom: clamp(24px, 4vw, 58px);
+  right: clamp(24px, 4vw, 58px);
+  font-size: clamp(72px, 11vw, 160px);
+  line-height: 0.9;
+  color: #ffffff24;
+  font-weight: 700;
+  letter-spacing: -0.07em;
+}
+.signature-intro .skip-intro {
+  color: #f4f4f4;
+  border-color: #ffffff33;
+}
+.community-wordmark {
+  font-size: 22px;
+  font-weight: 650;
+  letter-spacing: -0.04em;
+  white-space: nowrap;
+}
+.community-wordmark span {
+  display: block;
+  font: 10px/1.5 var(--font-geist-mono);
+  letter-spacing: 0.12em;
+  color: var(--color-gray-400);
+}
+.community-header .reading-navigation {
+  font-size: 12px;
+  gap: 24px;
+}
+.community-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  padding: 40px max(24px, 5vw);
+  border-top: 1px solid rgb(var(--fg-rgb) / 0.15);
+}
+.community-footer p {
+  font-size: 20px;
+}
+.community-footer p span {
+  display: block;
+  font-size: 12px;
+  color: var(--color-gray-400);
+  margin-top: 6px;
+}
+.resume-career-focus {
+  border-block: 1px solid rgb(var(--fg-rgb) / 0.16);
+  margin: 65px 0;
+  padding: 38px 0;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+}
+.resume-career-focus h2 {
+  font-size: 26px;
+  letter-spacing: -0.04em;
+}
+.resume-career-focus p {
+  color: var(--color-gray-400);
+  max-width: 50em;
+}
+.resume-business-projects {
+  margin: 80px 0;
+}
+.resume-business-projects article {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  padding: 28px 0;
+  border-bottom: 1px solid rgb(var(--fg-rgb) / 0.15);
+}
+.resume-business-projects h3 {
+  font-size: 24px;
+}
+.resume-business-projects p {
+  color: var(--color-gray-400);
+  font-size: 16px;
+}
+.resume-business-projects a {
+  font-size: 13px;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+@media (max-width: 760px) {
+  .community-footer {
+    display: block;
+  }
+  .community-footer > a {
+    margin-top: 25px;
+  }
+  .community-header .reading-navigation {
+    gap: 18px;
+    font-size: 11px;
+  }
+  .resume-career-focus,
+  .resume-business-projects article {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
+@media print {
+  .signature-intro,
+  .community-header,
+  .community-footer {
+    display: none !important;
+  }
+}
+
+.work-evidence {
+  margin: 40px 0;
+  border: 1px solid rgb(var(--fg-rgb) / 0.16);
+  border-radius: 18px;
+  overflow: hidden;
+}
+.work-evidence > a {
+  display: block;
+  background: #fff;
+}
+.work-evidence img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.work-evidence figcaption {
+  padding: 22px;
+}
+.work-evidence figcaption strong {
+  font-size: 15px;
+}
+.work-evidence figcaption p {
+  font-size: 13px;
+  line-height: 1.8;
+  margin-top: 10px;
+  color: var(--color-gray-400);
+}
+.work-evidence-compact {
+  margin: 20px 0 0;
+}
+.work-evidence-compact figcaption {
+  padding: 18px;
+}

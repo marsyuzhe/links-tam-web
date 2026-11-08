@@ -1,0 +1,519 @@
+/* Local device styles. No global palette, source timeline or print layout overrides. */
+.interactive-dock {
+  width: min(390px, 100%);
+  margin: 0 auto;
+}
+.key-device {
+  position: relative;
+  isolation: isolate;
+}
+.device-stage {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+.device-canvas {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.device-canvas canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.device-inputs {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  padding: 30px 7%;
+  gap: 30px;
+}
+.device-key {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-width: 44px;
+  min-height: 44px;
+  touch-action: pan-y;
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+.device-key:focus-visible {
+  outline: 2px solid #c0dce8 !important;
+  outline-offset: 7px;
+  border-radius: 18px;
+}
+.key-look {
+  display: grid;
+  place-items: center;
+  position: relative;
+  aspect-ratio: 1.08;
+  width: 100%;
+  border-radius: 18% 18% 15% 15%;
+  background: linear-gradient(145deg, #7b8b98, #34404c 50%, #1c252e);
+  border: 1px solid #a1b9c14d;
+  box-shadow:
+    inset 0 2px 2px #ffffff4d,
+    inset 0 -7px 2px #0008,
+    0 10px 0 #111a22,
+    0 12px 0 4px #060a0e,
+    0 16px 20px #0008;
+  transform: perspective(600px) rotateX(20deg);
+  transition:
+    transform 0.18s,
+    filter 0.18s;
+}
+.key-look img {
+  width: 64%;
+  height: 64%;
+  object-fit: contain;
+  pointer-events: none;
+}
+.key-circuit {
+  background: linear-gradient(145deg, #505f6b, #27323b 55%, #192129);
+}
+.key-display {
+  background: linear-gradient(145deg, #d5e1e7, #9badb8 60%, #667f90);
+  box-shadow:
+    inset 0 2px 5px #ffffffbd,
+    inset 0 -7px 3px #68849288,
+    0 10px 0 #354954,
+    0 12px 0 4px #111c25,
+    0 16px 20px #0008;
+}
+.key-document {
+  background: linear-gradient(145deg, #87919b, #57616c 65%, #3b4752);
+}
+.key-signal,
+.key-resume,
+.key-server {
+  background: linear-gradient(145deg, #c4d3dd, #8b9fae 60%, #5b6d7b);
+}
+.key-code {
+  background: linear-gradient(145deg, #657987, #35434f 60%, #202b34);
+}
+.device-key.key-active .key-look {
+  transform: perspective(600px) rotateX(16deg) translateY(-4px);
+  filter: brightness(1.12);
+}
+.device-key.key-pressed .key-look {
+  transform: perspective(600px) rotateX(20deg) translateY(7px);
+  filter: brightness(0.95);
+}
+.device-css-base {
+  position: absolute;
+  inset: 21% 2% 12%;
+  border-radius: 18px;
+  background: linear-gradient(170deg, #28343f, #121a22 65%);
+  border: 1px solid #566c7b66;
+  box-shadow:
+    inset 0 1px 1px #ffffff26,
+    0 10px 0 #090e13,
+    0 20px 35px #0007;
+  transform: perspective(800px) rotateX(20deg);
+}
+.device-3d .device-css-base,
+.device-3d .device-key > .key-look {
+  visibility: hidden;
+}
+.device-3d .device-inputs {
+  display: block;
+  padding: 0;
+}
+.key-device-dock .device-stage {
+  height: 112px;
+}
+.key-device-dock .device-inputs {
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0 25px 26px;
+  gap: 24px;
+}
+.key-device-dock .key-look {
+  max-width: 76px;
+  border-radius: 15px;
+}
+.key-device-dock .device-css-base {
+  inset: 10px 8px 25px;
+  border-radius: 12px;
+}
+.dock-key-label {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 11px;
+  line-height: 1.4;
+  font-weight: 500;
+  color: var(--color-gray-200);
+}
+.memory-keys {
+  max-width: 960px;
+  margin: 90px auto 0;
+  scroll-margin-top: 100px;
+  text-align: center;
+}
+.memory-invitation {
+  font-size: clamp(22px, 2.8vw, 36px);
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+.memory-discovery {
+  height: 85px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 13px;
+  line-height: 1.9;
+  color: var(--color-gray-400);
+}
+.memory-discovery strong {
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--color-white);
+}
+.memory-discovery p {
+  margin-top: 4px;
+}
+.memory-resume {
+  font-size: 11px;
+  color: var(--color-purple-400);
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+.experience-flight {
+  position: fixed !important;
+  z-index: 150;
+  pointer-events: none;
+  aspect-ratio: auto;
+  max-width: none;
+  transform: none;
+}
+.experience-detail {
+  max-width: 1180px;
+  margin: auto;
+}
+.experience-detail-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 230px;
+  gap: 65px;
+  align-items: center;
+  margin: 75px 0;
+}
+.experience-detail h1 {
+  font-size: clamp(2.3rem, 5vw, 5.4rem);
+  font-weight: 600;
+  letter-spacing: -0.055em;
+  line-height: 1.18;
+  text-wrap: balance;
+}
+.experience-detail-role {
+  margin-top: 25px;
+  font-size: 21px;
+  color: var(--color-gray-300);
+}
+.experience-detail-meta {
+  margin-top: 24px;
+  font-size: 13px;
+  color: var(--links-copper);
+  line-height: 2;
+}
+.experience-key-anchor {
+  width: 220px;
+  height: 200px;
+  transform: perspective(600px) rotateX(15deg) rotateZ(-5deg);
+}
+.experience-detail-copy {
+  max-width: 760px;
+  margin-left: 8%;
+  font-size: 16px;
+  line-height: 2;
+  color: var(--color-gray-300);
+}
+.experience-detail-copy section {
+  margin-bottom: 45px;
+}
+.experience-detail-copy h2 {
+  font-size: 25px;
+  font-weight: 600;
+  color: var(--color-white);
+  margin-bottom: 20px;
+}
+.experience-detail-copy ul {
+  list-style: disc;
+  padding-left: 1.2em;
+}
+.experience-detail-copy li {
+  margin: 13px 0;
+}
+.experience-project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px 30px;
+}
+.experience-project-links a {
+  text-decoration: underline;
+  text-underline-offset: 8px;
+}
+.experience-detail-copy .note {
+  margin-top: 20px;
+}
+.memory-back {
+  view-transition-name: memory-back;
+}
+@media (max-width: 600px) {
+  .memory-keys {
+    margin-top: 65px;
+  }
+  .memory-invitation {
+    font-size: 24px;
+  }
+  .key-device-memory .device-stage {
+    height: 355px;
+  }
+  .key-device-memory .device-inputs {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 34px;
+    padding: 25px 12% 50px;
+  }
+  .key-device-memory .device-css-base {
+    inset: 15px 4% 35px;
+  }
+  .key-device-memory .key-look {
+    max-width: 130px;
+  }
+  .memory-discovery {
+    height: 92px;
+    padding: 0 10px;
+    font-size: 12px;
+  }
+  .memory-discovery strong {
+    font-size: 15px;
+  }
+  .experience-detail-header {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    margin: 45px 0;
+  }
+  .experience-key-anchor {
+    width: 140px;
+    height: 128px;
+    margin: 0 auto;
+  }
+  .experience-detail h1 {
+    font-size: clamp(2.1rem, 9vw, 3rem);
+  }
+  .experience-detail-role {
+    font-size: 17px;
+  }
+  .experience-detail-copy {
+    margin-left: 0;
+    font-size: 14px;
+  }
+  .experience-detail-copy h2 {
+    font-size: 22px;
+  }
+  .experience-detail-header > div:first-child {
+    order: 2;
+  }
+  .key-device-dock .device-inputs {
+    gap: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .interactive-dock {
+    max-width: 350px;
+  }
+}
+@media (max-width: 260px) {
+  .key-device-memory .device-stage {
+    height: 680px;
+  }
+  .key-device-memory .device-inputs {
+    grid-template-columns: 1fr;
+    padding: 20px 20%;
+    gap: 30px;
+  }
+  .dock-key-label {
+    font-size: 9px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .key-look {
+    transition: none;
+    transform: none;
+  }
+  .device-key.key-active .key-look,
+  .device-key.key-pressed .key-look {
+    transform: none;
+  }
+  .experience-flight {
+    display: none;
+  }
+}
+@media print {
+  .experience-key-anchor,
+  .memory-back {
+    display: none;
+  }
+  .experience-detail-header {
+    display: block;
+    margin: 0 0 25px;
+  }
+  .experience-detail h1 {
+    font-size: 28pt;
+  }
+  .experience-detail-copy {
+    margin-left: 0;
+    color: #25313d;
+  }
+  .experience-detail-copy h2 {
+    color: #17202b;
+  }
+}
+
+/* Both renderers share device-layout.ts; only surface shading differs. */
+.key-device[data-layout='positioned'] .device-inputs {
+  display: block;
+  padding: 0;
+  gap: 0;
+}
+.key-device[data-layout='positioned'] .device-css-base {
+  inset: auto;
+  transform: none;
+  border-radius: 22px;
+}
+.device-key > .key-look {
+  height: 100%;
+  max-width: none;
+  aspect-ratio: auto;
+  transform: none;
+  border-radius: 23%;
+  box-shadow:
+    inset 0 2px 3px #ffffff4d,
+    inset 0 -5px 3px #0005,
+    0 9px 0 #18232b,
+    0 12px 0 3px #070d12,
+    0 16px 22px #0006;
+}
+.device-key.key-active .key-look {
+  transform: translateY(-4px);
+}
+.device-key.key-pressed .key-look {
+  transform: translateY(7px);
+}
+.key-device .device-key > .key-look img {
+  width: 64%;
+  height: 64%;
+}
+.memory-key-label {
+  position: absolute;
+  top: calc(100% + 18px);
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--color-gray-400);
+}
+.memory-discovery {
+  height: 90px;
+  padding: 12px 12px 0;
+}
+.experience-detail-header {
+  gap: clamp(28px, 5vw, 65px);
+  margin-top: 55px;
+}
+.experience-detail h1 {
+  font-size: clamp(2rem, 4.6vw, 4.2rem);
+  line-height: 1.25;
+  letter-spacing: -0.04em;
+  overflow-wrap: anywhere;
+}
+.experience-detail-role {
+  line-height: 1.6;
+}
+.experience-detail-copy {
+  overflow-wrap: anywhere;
+}
+@media (max-width: 700px) {
+  .experience-detail-header {
+    grid-template-columns: 1fr;
+  }
+  .experience-key-anchor {
+    width: 145px;
+    height: 132px;
+    margin-inline: auto;
+  }
+  .experience-detail-header > div:first-child {
+    order: 2;
+  }
+  .experience-detail h1 {
+    font-size: clamp(2rem, 7.8vw, 3rem);
+  }
+  .experience-detail-copy {
+    margin-left: 0;
+  }
+  .memory-invitation {
+    font-size: clamp(20px, 4.4vw, 30px);
+  }
+  .memory-key-label {
+    font-size: 10px;
+    top: calc(100% + 14px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .device-key.key-active .key-look,
+  .device-key.key-pressed .key-look {
+    transform: none;
+  }
+}
+
+.key-device .device-key > .key-look img {
+  transform: translateY(-10%) scaleY(0.8);
+}
+
+/* Satin palette and rounded silhouette shared with the physical key models. */
+.key-circuit {
+  background: linear-gradient(180deg, #344956 0%, #334956 74%, #2b414e 100%);
+}
+.key-display {
+  background: linear-gradient(180deg, #c7d8de 0%, #c9d9df 74%, #bacdd5 100%);
+}
+.key-document {
+  background: linear-gradient(180deg, #778c99 0%, #788c99 74%, #6d8290 100%);
+}
+.key-signal {
+  background: linear-gradient(180deg, #92adbd 0%, #91adbd 74%, #819caa 100%);
+}
+.key-device[data-layout='positioned'] .device-css-base {
+  background: linear-gradient(180deg, #172c39, #142733);
+  border-color: #2e4655;
+  border-radius: 18px;
+}
+.key-device[data-layout='positioned'] .device-key > .key-look {
+  position: absolute;
+  top: 6.2%;
+  width: 96.4%;
+  height: 90.3%;
+  border-radius: 20%;
+  border-color: #ffffff12;
+  box-shadow:
+    inset 0 1px 2px #ffffff14,
+    inset 0 -6px 7px #b6d1e61c,
+    0 6px 0 #17242e,
+    0 10px 0 4px #070d12;
+}
+.key-device .device-key > .key-look img {
+  transform: translateY(-20%) scaleY(0.8);
+}
+@media (max-width: 600px) {
+  .key-device[data-layout='positioned'] .device-css-base {
+    border-radius: 14px;
+  }
+}
