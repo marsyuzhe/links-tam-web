@@ -1,0 +1,22 @@
+[
+  [
+    "character",
+    "Use case: stylized-concept. Create a premium original fictional young East Asian male creator character, explicitly an invented IP concept not a portrait of a real person. Semi-realistic hand-painted editorial illustration, natural composed expression, black casually layered hair, dark charcoal modern overshirt over dark tee, small crisp white 'Links' clothing mark on chest, subtle silver hardware, half body with hands naturally resting on a closed sketchbook, realistic mature proportions not chibi. Three-quarter view facing slightly left. Left upper key light, cool silver-blue shadows and tiny warm copper details. Restrained designer portfolio aesthetic, rich hand drawn brush texture, elegant memorable silhouette. No cybernetic parts, no glowing eyes, no purple/green/neon. Isolated transparent background, full head and hands inside canvas, large clean cutout, high quality.",
+    true
+  ],
+  [
+    "manga-cover",
+    "Use case: stylized-concept. Premium 16:9 original artwork for 'Links Manga Studio' software portfolio cover. An abstract physical sculpture of floating manga paper leaves and translucent graphite printing frames, one pen-like silver tool, controlled layered compositions suggesting translation and typesetting; beautifully crafted white paper, black ink brush fragments, silver metal edges, restrained ice blue and warm copper accent. Dramatic studio key light from upper left against deep charcoal background, tactile hand-painted editorial/3D hybrid, strong focal composition centered for gallery crop, generous dark negative space. Not a software screenshot, absolutely no windows, buttons, app interfaces, readable comic text or borrowed characters; no text at all, no watermark, no neon, no green, no purple gradient. Wide landscape.",
+    false
+  ],
+  [
+    "agent-cover",
+    "Use case: stylized-concept. Premium 16:9 original artwork for an AI commerce video workflow portfolio art cover. A small sculptural assembly of three physical silver movie frames, a dark folded film ribbon and tiny copper connection conduits forms a coherent path from a blank product plinth toward a framed light image. Convey workflow and creative media through tangible editorial objects, no computer UI, no dashboard, no real product, no text. Deep charcoal backdrop, silver and cold white materials with restrained ice blue highlights and tiny warm copper detail; directional upper left studio light. Tactile painted illustration/3D hybrid, precise craftsmanship, centered composition suitable for horizontal gallery crop. Match elegant restrained art direction of floating manga paper sculpture. No green, purple, neon, robot brain, particles, or watermark.",
+    false
+  ],
+  [
+    "toolbox-cover",
+    "Use case: stylized-concept. Premium 16:9 original portfolio artwork for 'Links Toolbox': a meticulously crafted open modular charcoal tool case with silver compartments containing a few abstract geometric instruments: a paper organizer, simple clip-shaped silver object, small server-like solid blocks and a blank frosted tile. Tangible creative workspace sculpture, not a software screen or actual shipped product. No labels or text. Deep charcoal backdrop, cold white and brushed silver surfaces, restrained ice blue light and tiny warm copper hardware. Upper-left studio light, tactile hand-painted editorial/3D hybrid aesthetic matching floating manga paper and film sculpture covers. Centered strong crop-friendly composition, spacious polished design, no neon, no purple/green, no random particles, no watermark.",
+    false
+  ]
+]

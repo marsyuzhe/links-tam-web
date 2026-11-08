@@ -1,0 +1,13 @@
+# Implementation
+
+- src/content/keycaps.ts maps stable experience IDs to visual style/slug. Actual company/dates/duties remain in experiences.ts. Hero simple links retain browser semantics and external GitHub target=_blank rel=noopener noreferrer.
+- LinksMemoryKeys -> KeyDevice -> dynamically imported MemoryKeysScene -> shared KeycapModel. Canvas is local, pointer-events:none, orthographic, frameloop=demand. HTML links are single source of activation; Three world bounds are projected to matching percentage hit rectangles using the actual R3F camera/container size.
+- Hover and Focus are independent sources; losing hover does not erase keyboard focus revelation. Press/Release/PointerCancel/drag-out/window blur reset without duplicate navigation. Pointer movement never updates global scene state per frame. Control/middle/new-tab navigation remains native.
+- Scene loads near viewport; leaving viewport unmounts WebGL. Reduced motion, hardwareConcurrency<=2/deviceMemory<=2, ?graphics=2d, WebGL failure and context loss use CSS 2.5D. Sustained measured interaction frame mean >60ms over 24 sampled active intervals triggers fallback. Static demand frames stop after motion finishes. Resource disposal is tied to component lifecycle.
+- ExperienceTransition creates a temporary body-level fixed SVG/CSS visual proxy outside transformed ScrollSmoother. It bridges source rectangle to detail header, then removes itself. Four real pages, not dialogs. Normal navigation is immediate; modified links are not intercepted.
+- Experience return state lives on the source history entry (experienceId, y, focusTarget, sourceRoute, timestamp). Detail marks valid source navigation; browser back and explicit return use history. Deep links return to /#memory-keys. Portfolio restores layout/ScrollTrigger, then y, then focus preventScroll. Existing project return mechanism is preserved.
+- noscript-only style hides an otherwise blocking preloader and exposes Hero native links. It changes no normal-JS timeline. Resume remains HTML/print; PDF regenerated after the date review change.
+
+Routes: /experience/kaian, /experience/sunyedisplay, /experience/cr-gas, /experience/china-unicom. Four statically generated readable pages; unknown slug404. Existing local robots=noindex setting retained, no public deployment.
+
+Return refinement: source state also has a short-lived per-tab session backup for full reload/back cases, cleared only after scroll/focus restoration commits. Normal history Back uses the same original key's visual proxy as a reverse bridge. Full-document reloads retain reliable position/focus restoration; unsupported visual transitions degrade without holding a permanent Canvas.
